@@ -1,7 +1,7 @@
-#Download -url "https://example.com/file.txt" -outfile "c:\windows\temp\file.txt"
-function Download ($url, $filename)
+#Download -url "https://example.com/file.txt" -outputfile "c:\windows\temp\file.txt"
+function Download ($url, $outputfile)
 {
-   (New-Object System.Net.WebClient).DownloadFile($url, $filename)
+   (New-Object System.Net.WebClient).DownloadFile($url, $outputfile)
 }
 
 #DownloadScript -url "http://example.com/a.ps1" 

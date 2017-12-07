@@ -8,7 +8,7 @@ IEX (New-Object System.Net.WebClient).DownloadString("https://raw.githubusercont
 ### Download
 This function download a file from an URL.
 ```
-Download -url "https://example.com/file.txt" -outfile "c:\windows\temp\file.txt"
+Download -url "https://example.com/file.txt" -outputfile "c:\windows\temp\file.txt"
 ```
 ### DownloadScript
 This function download and load in memory a powershell script from an URL.
