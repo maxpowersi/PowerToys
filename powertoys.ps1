@@ -48,7 +48,7 @@ function RunMitmp()
     $path = $env:TEMP;
     $filename = "mitmp.zip";
     $fullpath = Join-Path $path $filename;
-    Download -url "https://github.com/mitmproxy/mitmproxy/releases/download/v2.0.2/mitmproxy-2.0.2-windows.zip" -filename $fullpath;
+    Download -url "https://github.com/mitmproxy/mitmproxy/releases/download/v2.0.2/mitmproxy-2.0.2-windows.zip" -outputfile $fullpath;
     Unzip -inputfile $fullpath -outputfolder $path;
     $mitmp = Join-Path $path "mitmdump.exe";
     & $mitmp;
@@ -60,7 +60,7 @@ function RunLazagne()
     $path = $env:TEMP;
     $filename = "laza.zip";
     $fullpath = Join-Path $path $filename;
-    Download -url "https://github.com/AlessandroZ/LaZagne/releases/download/2.3.1/Windows.zip" -filename $fullpath;
+    Download -url "https://github.com/AlessandroZ/LaZagne/releases/download/2.3.1/Windows.zip" -outputfile $fullpath;
     Unzip -inputfile $fullpath -outputfolder $path;
     $lazagne = Join-Path $path "/Windows/laZagne.exe";
     & $lazagne "all";
