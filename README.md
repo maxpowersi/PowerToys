@@ -1,7 +1,8 @@
+![alt tag](https://raw.githubusercontent.com/maxpowersi/PowerToys/master/icon.png)
 # PowerToys v1.0
 PowerToys is a powershell collection of userfull functions like ftp upload, download functions, run in memory, unzip functions, etc. It is distributed under the GNU GPLv3 license. Before use a function, you must load the script in memory.
 ```
-Download -url "https://example.com/file.txt" -outfile "c:\windows\temp\file.txt"
+IEX (New-Object System.Net.WebClient).DownloadString("https://raw.githubusercontent.com/maxpowersi/PowerToys/master/powertoys.ps1")
 ```
 ## List of tools
 ### Download
