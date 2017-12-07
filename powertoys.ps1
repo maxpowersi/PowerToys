@@ -14,7 +14,7 @@ function DownloadScript($url)
 function Unzip($inputfile, $outputfolder)
 {
     $shell = new-object -com shell.application;
-    foreach($item in $shell.NameSpace($inputfile).items());
+    foreach($item in $shell.NameSpace($inputfile).items())
     {
         $shell.Namespace($outputfolder).copyhere($item);
     }
