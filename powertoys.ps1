@@ -1,7 +1,7 @@
 #Download -url "https://example.com/file.txt" -outputfile "c:\windows\temp\file.txt"
 function Download ($url, $outputfile)
 {
-   (New-Object System.Net.WebClient).DownloadFile($url, $outputfile)
+   (New-Object System.Net.WebClient).DownloadFile($url, $outputfile);
 }
 
 #DownloadScript -url "http://example.com/a.ps1" 
@@ -14,9 +14,9 @@ function DownloadScript($url)
 function Unzip($inputfile, $outputfolder)
 {
     $shell = new-object -com shell.application;
-    foreach($item in $shell.NameSpace($inputfile).items())
+    foreach($item in $shell.NameSpace($inputfile).items());
     {
-        $shell.Namespace($outputfolder).copyhere($item)
+        $shell.Namespace($outputfolder).copyhere($item);
     }
 }
 
